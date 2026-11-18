@@ -6,6 +6,186 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: "Courier New", monospace;
-    background-color: #f5f1e8;
-    color: #222;
+    background: #f3f0e8;
+    color: #202020;
+}
+
+
+/* TOP MENU */
+
+.menu-bar {
+    height: 42px;
+    background: #202020;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 22px;
+    font-size: 13px;
+}
+
+.menu-left,
+.menu-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+
+/* DESKTOP */
+
+.desktop {
+    min-height: calc(100vh - 82px);
+    position: relative;
+    padding: 60px;
+}
+
+
+/* INTRO */
+
+.intro {
+    max-width: 650px;
+}
+
+.small-text {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: clamp(35px, 6vw, 75px);
+    margin: 8px 0;
+    font-weight: 400;
+}
+
+.intro-text {
+    max-width: 500px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* FILES */
+
+.desktop-files {
+    margin-top: 70px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    gap: 45px 55px;
+}
+
+.file {
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+
+    transition: transform 0.15s ease;
+}
+
+.file:hover {
+    transform: translateY(-5px);
+}
+
+.folder-icon,
+.document-icon {
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+.file p {
+    margin: 0;
+}
+
+
+/* NOTE WINDOW */
+
+.note {
+    position: absolute;
+
+    right: 8%;
+    top: 180px;
+
+    width: 300px;
+
+    background: white;
+    border: 2px solid #202020;
+
+    box-shadow: 7px 7px 0 #202020;
+}
+
+.note-header {
+    background: #202020;
+    color: white;
+
+    padding: 8px 12px;
+
+    font-size: 12px;
+}
+
+.note-content {
+    padding: 18px;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* TASKBAR */
+
+.taskbar {
+    min-height: 40px;
+
+    background: #202020;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 22px;
+
+    font-size: 11px;
+}
+
+.taskbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.taskbar a:hover {
+    text-decoration: underline;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .desktop {
+        padding: 35px 25px 80px;
+    }
+
+    .desktop-files {
+        grid-template-columns: repeat(2, 130px);
+    }
+
+    .note {
+        position: relative;
+
+        right: auto;
+        top: auto;
+
+        margin-top: 60px;
+
+        width: 100%;
+        max-width: 350px;
+    }
+
 }
